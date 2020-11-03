@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="model24">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0483584912700585 -0.570328251080176 -0.0266876605513664"
+        rpy="0 0 0" />
+      <mass
+        value="3.21829386296279" />
+      <inertia
+        ixx="0.00721990996747051"
+        ixy="-1.93643410745552E-06"
+        ixz="-3.86677335720234E-07"
+        iyy="0.00580151653868739"
+        iyz="6.76040378112396E-07"
+        izz="0.0125117312153311" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_front_wheel_suspension">
+    <inertial>
+      <origin
+        xyz="-0.00786753377996494 -0.0155948984609842 0.0232556468762561"
+        rpy="0 0 0" />
+      <mass
+        value="0.0651133753252895" />
+      <inertia
+        ixx="1.48802654908116E-05"
+        ixy="1.64845451975805E-08"
+        ixz="-1.56420031463121E-07"
+        iyy="1.75245555055195E-05"
+        iyz="-2.96403540336102E-09"
+        izz="8.01010024686586E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/left_front_wheel_suspension.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/left_front_wheel_suspension.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_front_wheel_suspension_joint"
+    type="prismatic">
+    <origin
+      xyz="-0.126408549299102 -0.497497400808498 -0.100377754287938"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_front_wheel_suspension" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_front_wheel">
+    <inertial>
+      <origin
+        xyz="0.0158399891826273 -4.59981459866032E-09 7.99690621500204E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.22822169800504" />
+      <inertia
+        ixx="0.000789211576324214"
+        ixy="-1.09995507949868E-10"
+        ixz="1.91230261060072E-09"
+        iyy="0.000410429434291453"
+        iyz="-5.55679024387239E-16"
+        izz="0.000410429434301075" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/left_front_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/left_front_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_front_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0197601403859578 -0.0217865728752538 0.00999990007507129"
+      rpy="3.08413603591628 0 3.14159265358979" />
+    <parent
+      link="left_front_wheel_suspension" />
+    <child
+      link="left_front_wheel" />
+    <axis
+      xyz="0.999999999987214 0 0" />
+    <limit
+      effort="3.1"
+      velocity="7" />
+  </joint>
+  <link
+    name="right_front_wheel_suspension">
+    <inertial>
+      <origin
+        xyz="-0.00415434378457435 -0.0156302499401892 0.023255686661272"
+        rpy="0 0 0" />
+      <mass
+        value="0.0651133753251555" />
+      <inertia
+        ixx="1.48802639086072E-05"
+        ixy="1.648453020563E-08"
+        ixz="1.56454773175217E-07"
+        iyy="1.75245555054544E-05"
+        iyz="2.96411876510204E-09"
+        izz="8.01010182899685E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/right_front_wheel_suspension.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/right_front_wheel_suspension.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_front_wheel_suspension_joint"
+    type="prismatic">
+    <origin
+      xyz="0.0435913849612735 -0.497497370411912 -0.100377754287938"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_front_wheel_suspension" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_front_wheel">
+    <inertial>
+      <origin
+        xyz="0.015839199018542 1.11022302462516E-16 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.22822169800504" />
+      <inertia
+        ixx="0.000789211576333899"
+        ixy="-3.35875425871413E-20"
+        ixz="5.10286006149185E-21"
+        iyy="0.000410429434291421"
+        iyz="-3.18484388167617E-19"
+        izz="0.00041042943429142" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/right_front_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/right_front_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_front_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.00773912001850283 -0.0217849999999998 0.0100000000000001"
+      rpy="0.162600051915931 0 0" />
+    <parent
+      link="right_front_wheel_suspension" />
+    <child
+      link="right_front_wheel" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="3.1"
+      velocity="7" />
+  </joint>
+  <link
+    name="left_rear_wheel_suspension">
+    <inertial>
+      <origin
+        xyz="-0.00786753377996494 -0.0155948984609842 0.023255646876256"
+        rpy="0 0 0" />
+      <mass
+        value="0.0651133753252895" />
+      <inertia
+        ixx="1.48802654908115E-05"
+        ixy="1.64845451975805E-08"
+        ixz="-1.56420031463129E-07"
+        iyy="1.75245555055195E-05"
+        iyz="-2.96403540336443E-09"
+        izz="8.01010024686586E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/left_rear_wheel_suspension.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/left_rear_wheel_suspension.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_rear_wheel_suspension_joint"
+    type="prismatic">
+    <origin
+      xyz="-0.126409864093137 -0.757497400808498 -0.100377754287938"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_rear_wheel_suspension" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_rear_wheel">
+    <inertial>
+      <origin
+        xyz="0.0158401765053967 7.40328947035351E-08 3.05858046945051E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.22822169800504" />
+      <inertia
+        ixx="0.000789211576324214"
+        ixy="1.77032992327332E-09"
+        ixz="7.31390626651519E-10"
+        iyy="0.000410429434299695"
+        iyz="3.41782537601615E-15"
+        izz="0.000410429434292833" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/left_rear_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/left_rear_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_rear_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0197599530631884 -0.0217865728752538 0.00999990007601836"
+      rpy="-1.96257703993044 0 3.14159265358979" />
+    <parent
+      link="left_rear_wheel_suspension" />
+    <child
+      link="left_rear_wheel" />
+    <axis
+      xyz="0.999999999987214 0 0" />
+    <limit
+      effort="3.1"
+      velocity="7" />
+  </joint>
+  <link
+    name="right_rear_wheel_suspension">
+    <inertial>
+      <origin
+        xyz="-0.00415434378457436 -0.0156302499401892 0.0232556866612721"
+        rpy="0 0 0" />
+      <mass
+        value="0.0651133753251554" />
+      <inertia
+        ixx="1.48802639086072E-05"
+        ixy="1.64845302056292E-08"
+        ixz="1.56454773175207E-07"
+        iyy="1.75245555054544E-05"
+        iyz="2.9641187651051E-09"
+        izz="8.01010182899684E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/right_rear_wheel_suspension.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/right_rear_wheel_suspension.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_rear_wheel_suspension_joint"
+    type="prismatic">
+    <origin
+      xyz="0.0435913849612735 -0.757497370411907 -0.100377754287938"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_rear_wheel_suspension" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_rear_wheel">
+    <inertial>
+      <origin
+        xyz="0.0158391990185419 1.11022302462516E-16 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.22822169800504" />
+      <inertia
+        ixx="0.0007892115763339"
+        ixy="4.70450765359E-22"
+        ixz="5.665157729366E-21"
+        iyy="0.000410429434291421"
+        iyz="-3.1354901504282E-19"
+        izz="0.00041042943429142" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/right_rear_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/right_rear_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_rear_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.00773912001850204 -0.021785 0.01"
+      rpy="0 0 0" />
+    <parent
+      link="right_rear_wheel_suspension" />
+    <child
+      link="right_rear_wheel" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="3.1"
+      velocity="7" />
+  </joint>
+  <link
+    name="camera">
+    <inertial>
+      <origin
+        xyz="-0.0113544749097687 0.00129821973144108 1.10631679103926E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0436119950287127" />
+      <inertia
+        ixx="2.35707058046401E-05"
+        ixy="2.17579681215255E-08"
+        ixz="1.01813691699858E-09"
+        iyy="2.21058141232449E-05"
+        iyz="8.85791114075142E-10"
+        izz="4.29479133591155E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/camera.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/camera.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera"
+    type="fixed">
+    <origin
+      xyz="-0.0474279144716994 -0.455698685205959 0.0206099543969956"
+      rpy="1.5707963267949 0 1.57079632679541" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="camera2">
+    <inertial>
+      <origin
+        xyz="-0.0113544534309981 0.00129834296576298 1.07114395615296E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0436115646020756" />
+      <inertia
+        ixx="2.35700541862173E-05"
+        ixy="2.17644981327687E-08"
+        ixz="9.97288459824692E-10"
+        iyy="2.21052311066008E-05"
+        iyz="6.84462776105538E-10"
+        izz="4.294719281608E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/camera2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/camera2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera2"
+    type="fixed">
+    <origin
+      xyz="-0.047427914471688 -0.469703936876262 0.0891447927385417"
+      rpy="1.5707963267949 -0.261799387799143 1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lidar">
+    <inertial>
+      <origin
+        xyz="-0.00868778989367758 -0.00242014065569163 -0.0287648859064543"
+        rpy="0 0 0" />
+      <mass
+        value="0.0730845706123877" />
+      <inertia
+        ixx="1.95808756096351E-05"
+        ixy="-1.03933750344927E-07"
+        ixz="4.28391241039135E-07"
+        iyy="2.41250086763081E-05"
+        iyz="-9.42709906914269E-09"
+        izz="4.1418452244397E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/lidar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/lidar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_joint"
+    type="fixed">
+    <origin
+      xyz="-0.039622368083775 -0.541757887991876 0.154117879305891"
+      rpy="0 0 1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="imu">
+    <inertial>
+      <origin
+        xyz="-1.38777878078145E-17 0.00250000000000002 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.000510000000000001" />
+      <inertia
+        ixx="5.31250000000002E-09"
+        ixy="5.52943107967612E-26"
+        ixz="-7.37257477290141E-26"
+        iyy="8.50000000000004E-09"
+        iyz="1.59211946163093E-40"
+        izz="5.31250000000002E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/imu.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://model24/meshes/imu.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="imu"
+    type="fixed">
+    <origin
+      xyz="-0.088670136268106 -0.572498685205947 0.100617879305896"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="imu" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
